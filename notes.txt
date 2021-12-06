@@ -1,0 +1,25 @@
+//start app 
+django-admin startproject project_name
+
+go into main project cd crud
+start app 
+python manage.py startapp app_name
+
+//register app into installed app 
+
+
+//create model in models.py enroll dirt 
+//regitser it into admin.py inside enroll
+from .models import User
+
+@admin.regisyter(User)
+class UserAdmin(admin.ModelLAdmin):
+    list_display = ('id', 'name', 'email', 'password')
+//make migration
+python manage.py makemigrations
+
+//migrate
+python manage.py migrate 
+
+//crate superuser
+python manage.py createsuperuser
